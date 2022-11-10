@@ -12,7 +12,7 @@ int main(){
  double Trapeze(double a,double b, int n); 
  double Parabola(double a,double b, int n); 
 
- void Tabulation(double value);// табуляція в залежност від значень, щоб великі значенння не ламали таблицю
+ void Tabulation(double value);
 
  int A[20]; 
  int B[20]; 
@@ -63,26 +63,26 @@ int main(){
    do{
     printf(" Проміжок #%d , введіть a, b, N : ",i+1);
     scanf("%d %d %d",&A[i], &B[i], &N[i]);
-   }while(N[i] == 0); // перевіряєм правильність введених данних, N не повинно борівнювати 0
+   }while(N[i] == 0); 
   }
 
 //====================================== друкуєм зоголовок таблиці =========================================//
 printf("\n");
- switch(Metod_Used){ // в залежності від обраного методу
-  case 5: // виводим всі значення
-   case 1: // метод лівих квадратів
+ switch(Metod_Used){ 
+  case 5: 
+   case 1: 
      printf("             Left_Rect          ");
      if(Metod_Used != 5){printf("Delta N            ");}
    if(Metod_Used == 1){break;}
-   case 2: // метод правих квадратів
+   case 2: 
      printf("Right_Rect         ");
      if(Metod_Used != 5){printf("Delta N            ");}
    if(Metod_Used == 2){break;}
-   case 3: // метод трапецій
+   case 3: 
      printf("Trapeze            ");
      if(Metod_Used != 5){printf("Delta N            ");}
    if(Metod_Used == 3){break;}
-   case 4: // метод парабол
+   case 4: 
      printf("Parabola           ");
      if(Metod_Used != 5){printf("Delta N            ");}
    if(Metod_Used == 3){break;}
@@ -90,7 +90,7 @@ printf("\n");
  }
   
 //====================================== друкуємо саму таблицю =========================================//
-for(int i = 0; i < Gaps; i++){ //виводим на екран значення всіх введених проміжків
+for(int i = 0; i < Gaps; i++){ 
 do{
  printf("\n#%d",i+1);
  Tabulation(i+1);
